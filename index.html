@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="shortcut icon" href="img/icons8-paid-48.png">
+    <script src="js/index.js"></script>
+    <title>e-commerce</title>
+</head>
+<body>
+    <button id="scrollBtn" class="scroll-top-btn" title="Go to top">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!--Login form-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Username:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Password:</label>
+                <input type="password" class="form-control" id="recipient-name">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Login form-->
+
+    <!--Sign up form-->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Username:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Password:</label>
+                <input type="password" class="form-control" id="recipient-name">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Sign up form-->
+
+    <!--Navbar section-->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #dee0e3;">
+        <a class="navbar-brand" href="#"> <img src="img/icons8-paid-48.png" width="25" height="25" alt="">
+        Online Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> 
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><i class="fa fa-bell" style="font-size: 14px;"></i> Notifications <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><i class='fa fa-bullhorn' style="font-size: 14px;"></i> FAQs <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><i class="fa fa-address-card" style="font-size: 14px;"></i> Seller Centre <span class="sr-only">(current)</span></a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link" href="#">Help</a>
+            </li>-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class='fa fa-user' style="font-size: 14px;"></i> Account 
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i class="fa fa-user-circle" style="font-size: 14px;"></i> Sign in</a>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><i class="fa fa-user-circle" style="font-size: 14px;"></i> Sign up</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><i class="fa fa-wrench" style="font-size: 14px;"></i> Settings</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search any items" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+    </nav>
+    <!--Navbar section-->
+    <!--Advertisement-->
+    <center>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ul>
+          
+            <!-- Slides -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/slide1.png" alt="Slide 1" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="img/slide2.jpg" alt="Slide 2" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="img/slide3.png" alt="Slide 3" class="d-block w-100">
+              </div>
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+          
+          <!-- Include Bootstrap JS -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>          
+    <!--Advertisement--><br>
+    <!--Optional buttons-->
+    <div class="d-flex flex-wrap justify-content-center">
+        <button type="button" class="btn btn-success m-2"><i class="fa fa-shopping-cart"></i> Shoppy Supermarket</button>
+        <button type="button" class="btn btn-success m-2"><i class="fa fa-shopping-cart"></i> Cash On Delivery</button>
+        <button type="button" class="btn btn-success m-2"><i class="fa fa-shopping-cart"></i> 10% Cashback</button>
+        <button type="button" class="btn btn-success m-2"><i class="fa fa-shopping-cart"></i> Lowest Price Guaranteed</button>
+        <button type="button" class="btn btn-success m-2"><i class="fa fa-shopping-cart"></i> 10% Rebate NOW</button>
+        <button type="button" class="btn btn-success m-2"><i class="fa fa-shopping-cart"></i> Global Outlet</button>
+        <button type="button" class="btn btn-success m-2"><i class="fa fa-shopping-cart"></i> Shoppy Foodie</button>
+        <button type="button" class="btn btn-success m-2"><i class="fa fa-shopping-cart"></i> Reject Items</button>
+    </div>
+      
+    <!--Optional buttons--><br><br>
+    <!--Categories-->
+    <section class="section 1" style="background-color: #dee0e3;"><br>
+    <p style="font-size:20px;">CATEGORIES</p><br>
+    <div class="container" style="background-color: #dee0e3;">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="img/phone.jpg" style="width:100%;height:auto;border:0px solid dee0e3;border-radius: 4px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+            Mobile & Accessories
+          </div>
+          <div class="col-sm-3">
+            <img src="img/apple.jpg" style="width:100%;height:auto;border:0px solid grey;border-radius: 4px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+            Watches
+          </div>
+          <div class="col-sm-3">
+            <img src="img/health.jpg" style="width:100%;height:auto;border:0px solid grey;border-radius: 4px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+            Health & Beauty
+          </div>
+          <div class="col-sm-3">
+            <img src="img/toys.jpg" style="width:100%;height:auto;border:0px solid grey;border-radius: 4px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+            Baby & Toys
+          </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="img/womanshoes.jpg" style="width:100%;height:auto;border:0px solid grey;border-radius: 4px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+                Women Shoes
+              </div>
+              <div class="col-sm-3">
+                <img src="img/air.png" style="width:100%;height:auto;border:0px solid grey;border-radius: 4px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+                Home Appliances
+              </div>
+              <div class="col-sm-3">
+                <img src="img/consoles.jpg" style="width:100%;height:auto;border:0px solid grey;border-radius: 4px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+                Gaming & Consoles
+              </div>
+              <div class="col-sm-3">
+                <img src="img/bags.jpg" style="width:100%;height:auto;border:0px solid grey;border-radius: 4px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);">
+                Women's Bag
+              </div>
+        </div>
+      </div><br><br></section>      
+    <!--Categories--><br>
+    <!--Collection items-->
+    <p style="font-size:20px;">COLLECTION ITEMS<p style="font-size:20px;"></p><br>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+        <div class="col mb-4">
+            <div class="card">
+                <img src="img/adidas.png" alt="Denim Jeans" style="width:100%">
+                <br><h4>Adidas Men Shoe</h4>
+                <p class="price">$199.99</p>
+                <p>112 sold</p>
+                <center><button class="w-50">View Detail</button></center><br>
+                <p><button id="cart-btn"><i class="fa fa-shopping-cart"></i> Add to Cart</button></p>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card">
+                <img src="img/shirt.jpg" alt="Denim Jeans" style="width:100%">
+                <br><h4>Apollo shirt</h4>
+                <p class="price">$89.00</p>
+                <p>50 sold</p>
+                <center><button class="w-50">View Detail</button></center><br>
+                <p><button onclick="alert('Please login first before making any purchase!');"><i class="fa fa-shopping-cart"></i> Add to Cart</button></p>
+            </div>
+        </div>  
+        <div class="col mb-4">
+            <div class="card">
+                <img src="img/policewatch.jpg" alt="Denim Jeans" style="width:100%">
+                <br><h4>Police Watch</h4>
+                <p class="price">$299.99</p>
+                <p>5 sold</p>
+                <center><button class="w-50">View Detail</button></center><br>
+                <p><button onclick="alert('Please login first before making any purchase!');"><i class="fa fa-shopping-cart"></i> Add to Cart</button></p>
+            </div>
+        </div>  
+        <div class="col mb-4">
+            <div class="card">
+                <img src="img/blouse.jpg" alt="Denim Jeans" style="width:100%">
+                <br><h4>Muslimah Blouse</h4>
+                <p class="price">$19.99</p>
+                <p>10 sold</p>
+                <center><button class="w-50">View Detail</button></center><br>
+                <p><button onclick="alert('Please login first before making any purchase!');"><i class="fa fa-shopping-cart"></i> Add to Cart</button></p>
+            </div>
+        </div>  
+        <div class="col mb-4">
+            <div class="card">
+                <img src="img/femalejeans.jpg" alt="Denim Jeans" style="width:100%">
+                <br><h4>Female skinny fit jeans</h4>
+                <p class="price">$299.99</p>
+                <p>53 sold</p>
+                <center><button class="w-50">View Detail</button></center><br>
+                <p><button onclick="alert('Please login first before making any purchase!');"><i class="fa fa-shopping-cart"></i> Add to Cart</button></p>
+            </div>
+        </div>  
+        <div class="col mb-4">
+            <div class="card">
+                <img src="img/jeans.jpg" alt="Denim Jeans" style="width:100%">
+                <br><h4>Men straight cut jeans</h4>
+                <p class="price">$49.99</p>
+                <p>125 sold</p>
+                <center><button class="w-50">View Detail</button></center><br>
+                <p><button onclick="alert('Please login first before making any purchase!');"><i class="fa fa-shopping-cart"></i> Add to Cart</button></p>
+            </div>
+        </div>  
+        <div class="col mb-4">
+            <div class="card">
+                <img src="img/shirt.jpg" alt="Denim Jeans" style="width:100%">
+                <br><h4>Apollo shirt</h4>
+                <p class="price">$89.00</p>
+                <p>50 sold</p>
+                <center><button class="w-50">View Detail</button></center><br>
+                <p><button onclick="alert('Please login first before making any purchase!');"><i class="fa fa-shopping-cart"></i> Add to Cart</button></p>
+            </div>
+        </div>  
+        <div class="col mb-4">
+            <div class="card">
+                <img src="img/shirt.jpg" alt="Denim Jeans" style="width:100%">
+                <br><h4>Apollo shirt</h4>
+                <p class="price">$89.00</p>
+                <p>50 sold</p>
+                <center><button class="w-50">View Detail</button></center><br>
+                <p><button onclick="alert('Please login first before making any purchase!');"><i class="fa fa-shopping-cart"></i> Add to Cart</button></p>
+            </div>
+        </div>  
+    </div>
+    <!--Collection items-->
+    </center>
+    <!--footer-->
+        <footer class="footer mt-auto py-3" style="background-color: #dee0e3;">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+          </ul>
+          <p class="text-center text-muted">© 2021 Company, Inc</p>
+        </footer>
+    <!--footer-->
+</body>
+</html>
